@@ -339,6 +339,9 @@ PS C:\Develops\quests\powershell_practice\my_project> rm C:\Develops\quests\powe
 ❔ 문제 5-3: 최종 확인
 my_project 폴더의 모든 하위 내용을 재귀적으로 확인하세요
 각 폴더로 이동하여 파일 내용을 확인하세요
+> [!TIP]
+> `ls -R` shows all folders and files
+
 ``` sh
 PS C:\Develops\quests\powershell_practice\my_project> tree
 폴더 PATH의 목록입니다.
