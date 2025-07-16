@@ -52,7 +52,7 @@ drwxr-xr-x.  2 mk   mk      6 Jul 16 10:52 Public
 drwxr-xr-x.  2 mk   mk      6 Jul 16 10:52 Templates
 drwxr-xr-x.  2 mk   mk      6 Jul 16 10:52 Videos
 ```
-/etc 디렉터리의 내용을 확인하시오.
+3. /etc 디렉터리의 내용을 확인하시오.
 ```sh
 [mk@localhost ~]$ ls /etc/
 accountsservice          makedumpfile.conf.sample
