@@ -301,8 +301,8 @@ mv: cannot stat 'api_copy.md': No such file or directory
 	helper.py
 	```
 3. 프로젝트 루트의 README.md 파일을 현재 디렉토리에 PROJECT_INFO.md로 복사하시오.
-```sh
-[mk@localhost main]$ cp ./../../README.md PROJECT_INFO.md
-[mk@localhost main]$ ls
-api_copy.md  app.py  models  PROJECT_INFO.md
-```
+	```sh
+	[mk@localhost main]$ cp ./../../README.md PROJECT_INFO.md
+	[mk@localhost main]$ ls
+	api_copy.md  app.py  models  PROJECT_INFO.md
+	```
