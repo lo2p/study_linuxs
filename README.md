@@ -8,3 +8,4 @@
 - Basic Linux Commands: [퀘스트](/codes/quests/10_basic_linux_commands.md)
 - Basic More Linux Commands: [퀘스트](/codes/quests/20_basic_more_linux_commands.md) 
 - Relative Path Commands: [퀘스트](/codes/quests/30_relative_path_commands.md)
+- Wildcard: [퀘스트](/codes/quests/40_linux_wildcard_practice.md)
