@@ -11,7 +11,7 @@ mkdir wildcard_file_practice && cd wildcard_file_practice
 
 ## 테스트 파일들 생성
 
-> [!info]
+> [!NOTE]
 > 총 35개 파일 생성
 
 ```bash
