@@ -9,3 +9,4 @@
 - Basic More Linux Commands: [퀘스트](/codes/quests/20_basic_more_linux_commands.md) 
 - Relative Path Commands: [퀘스트](/codes/quests/30_relative_path_commands.md)
 - Wildcard: [퀘스트](/codes/quests/40_linux_wildcard_practice.md)
+- File Management (Wildcard) [퀘스](/codes/quests/41_linux_file_management_wildcard_practice.md)
