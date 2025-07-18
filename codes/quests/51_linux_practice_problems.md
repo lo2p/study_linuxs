@@ -265,7 +265,7 @@ ls -l test_script.sh
 
 작성할 스크립트 내용:
 
-setup.sh
+  setup.sh
 ```bash
 #!/bin/bash
 mkdir -p logs && \
@@ -325,13 +325,15 @@ dr-xr--r--. 2 mk mk 6 Jul 18 17:55 ./project_logs/
 
 nano에서 작성할 내용 예시:
 
-backup 디렉토리 존재 확인, 존재하면 checked.txt 생성, 없으면 메시지 출력
+backup 디렉토리 존재 확인
+
+존재하면 checked.txt 생성, 없으면 메시지 출력
 
 check_dir.sh
 ```bash
 #!/bin/bash
-ls -d ./project_logs/ && \
-touch project_logs/checked.txt && \
+ls -d ./backup/ && \
+touch backup/checked.txt && \
 echo "backup 디렉토리가 없습니다"
 ```
 
@@ -339,7 +341,7 @@ echo "backup 디렉토리가 없습니다"
 ./check_dir.sh
 
 # output
-touch: cannot touch 'project_logs/checked.txt': Permission denied
+touch: cannot touch 'backup/checked.txt': No such file or directory
 ```
 
 
