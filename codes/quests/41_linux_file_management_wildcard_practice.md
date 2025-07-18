@@ -89,6 +89,14 @@ data/2024/{01,02,03} 구조로 디렉터리를 생성하세요
 mkdir -p data/2024/{01,02,03}
 ```
 
+명령어 확인
+```bash
+ls -d */
+
+# output
+archives/ backup_2020/ backup_2022/ backup_2024/ documents/ logs/ project_B/ scripts/ backup/ backup_2021/ backup_2023/ data/ images/ project_A/ project_C/
+```
+
 # cp 명령어 와일드카드 실습
 
 **2-1. 확장자별 파일 복사**
@@ -97,6 +105,11 @@ mkdir -p data/2024/{01,02,03}
 
 ```bash
 cp *.txt backup/
+ls backup/
+
+# output
+final_report.txt  log_access.txt  log_system.txt  old_report.txt  report2.txt
+license.txt       log_error.txt   new_report.txt  report1.txt     report3.txt
 ```
 
 **2-2. 특정 패턴 파일 복사**
@@ -105,6 +118,10 @@ cp *.txt backup/
 
 ```bash
 cp report* documents/
+ls documents/
+
+# output
+report1.txt  report2.txt  report3.txt
 ```
 
 **2-3. 숫자가 포함된 파일 복사**
@@ -113,6 +130,10 @@ cp report* documents/
 
 ```bash
 cp *[0-9]*.{jpg,png} images/
+ls images/
+
+# output
+image1.jpg  image2.jpg  image3.png
 ```
 
 **2-4. 특정 범위의 파일 복사**
@@ -121,6 +142,10 @@ data1.csv, data2.csv, data3.csv 파일만 backup 디렉터리로 복사하세요
 
 ```bash
 cp data[1-3].csv backup/
+ls backup/
+
+# output
+data1.csv data3.csv license.txt log_error.txt new_report.txt report1.txt report3.txt data2.csv final_report.txt log_access.txt log_system.txt old_report.txt report2.txt
 ```
 
 **2-5. 복합 조건 파일 복사**
@@ -129,6 +154,11 @@ cp data[1-3].csv backup/
 
 ```bash
 cp log_*.txt logs/
+ls logs/
+
+# output
+log_01  log_03  log_05  log_07  log_09  log_11  log_access.txt  log_system.txt
+log_02  log_04  log_06  log_08  log_10  log_12  log_error.txt
 ```
 
 
@@ -140,6 +170,10 @@ cp log_*.txt logs/
 
 ```bash
 mkdir -p temp && mv *.tmp temp/
+ls temp/
+
+# output
+temp1.tmp  temp2.tmp  temp3.tmp
 ```
 
 **3-2. 백업 파일 정리**
@@ -148,6 +182,10 @@ mkdir -p temp && mv *.tmp temp/
 
 ```bash
 mv backup_* archives/
+ls archives/
+
+# output
+backup_2020  backup_2021  backup_2022  backup_2023  backup_2023.tar  backup_2024  backup_2024.tar
 ```
 
 **3-3. 스크립트 파일 정리**
@@ -156,6 +194,10 @@ mv backup_* archives/
 
 ```bash
 mv *.sh scripts/
+ls scripts/
+
+# output
+script1.sh  script2.sh  test_script.sh
 ```
 
 **3-4. 특정 패턴 파일 이동**
@@ -164,6 +206,10 @@ mv *.sh scripts/
 
 ```bash
 mv file_[0-9][0-9][0-9].dat data/
+ls data/
+
+# output
+2024  file_001.dat  file_002.dat  file_010.dat
 ```
 
 **3-5. 조건부 파일 이동**
@@ -172,6 +218,10 @@ mv file_[0-9][0-9][0-9].dat data/
 
 ```bash
 mv {old_*,new_*} archives/
+ls archives/
+
+# output
+backup_2020 backup_2022 backup_2023.tar backup_2024.tar old_report.txt backup_2021 backup_2023 backup_2024 new_report.txt
 ```
 
 
@@ -431,5 +481,3 @@ mv *.csv *.dat data/
 복합 패턴 활용: *[0-9]*, file[1-3].txt
 
 디렉터리 생성 시 -p 옵션 활용: mkdir -p path/to/directory
-
-
