@@ -14,3 +14,4 @@
 - Wildcard: [퀘스트](/codes/quests/40_linux_wildcard_practice.md)
 - File Management (Wildcard): [퀘스트](/codes/quests/41_linux_file_management_wildcard_practice.md)
 - Nano Practice: [퀘스트](/codes/quests/50_linux_practice_problems.md)
+- Nano_Shell_Command-chaining: [퀘스트](/codes/quests/51_linux_practice_problems.md)
