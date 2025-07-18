@@ -417,11 +417,11 @@ cp *00[1-9].* */*00[1-9].* */*/*00[1-9].* */*/*/*00[1-9].* single_digit/
 4. 불필요한 임시 파일들(*.tmp)을 삭제
 
 ```bash
-mkdir -p completed ongoing archive
-mv report*.txt completed/
-mv temp* ongoing/
-mv *_draft ongoing/
-mv backup_* archive/
+mkdir -p completed ongoing archive \
+mv report*.txt completed/ \
+mv temp* ongoing/ \
+mv *_draft ongoing/ \
+mv backup_* archive/ \
 rm *.tmp
 ```
 
@@ -438,10 +438,10 @@ rm *.tmp
 4. 시스템 로그들을 logs/system 디렉터리로 이동
 
 ```bash
-mkdir -p logs/2024 logs/errors logs/system
-mv *2024*.log logs/2024/
-cp *error*.log logs/errors/
-rm *2023*.log
+mkdir -p logs/2024 logs/errors logs/system \
+mv *2024*.log logs/2024/ \
+cp *error*.log logs/errors/ \
+rm *2023*.log \
 mv *system*.log logs/system/
 ```
 
@@ -460,11 +460,11 @@ mv *system*.log logs/system/
 4. 데이터 파일들(*.csv, *.dat)을 data 디렉터리로 이동
 
 ```bash
-mkdir -p scripts config docs data
-mv *.sh scripts/
-cp *.conf *.config config/
-mv *.md *.txt docs/
-mv *.csv *.dat data/
+mkdir -p scripts config docs data \
+mv *.sh scripts/ \
+cp *.{conf,config} config/ \
+mv *.{md,txt} docs/ \
+mv *.{csv,dat} data/
 ```
 
 ---
