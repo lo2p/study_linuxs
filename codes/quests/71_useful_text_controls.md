@@ -23,8 +23,6 @@ echo -e "Linux\nWindows\nMacOS\nLinux\nUnix\nWindows\nLinux" > operating_systems
 
 **1-1. employees.txt 파일의 총 라인 수를 확인하세요.**
 
-문제 1: wc 명령어 활용 (기초)
-
 ```bash
 wc -l employees.txt
 
