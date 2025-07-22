@@ -37,11 +37,11 @@ echo "rm -f ~/Downloads/*" >> .bash_profile
 생성 구조:
 
 ```
-- ~/Downloads/
--  └── auto_created/
--       ├── info.txt
--       └── logs/
--            └── log.txt
+~/Downloads/
+ └── auto_created/
+      ├── info.txt
+      └── logs/
+           └── log.txt
 ```
 
 조건:
@@ -66,7 +66,7 @@ printf "mkdir -p '$HOME/Downloads/auto_created/logs'\ntouch '$HOME/Downloads/aut
 
 ```bash
 # bash
-sudo bash -c "echo '공식 메시지' >> /etc/login_notice.txt"
+sudo bash -c "echo '공지 메시지' >> /etc/login_notice.txt"
 sudo bash -c "echo 'cat /etc/login_notice.txt' >> /etc/profile"
 
 # tee
