@@ -26,7 +26,6 @@ echo "echo 'Welcome, $USER'" >> .bash_profile
 - 일반 파일만 삭제 (서브디렉토리, 숨김파일은 삭제하지 않음)  
 - 로그인 시 자동 실행  
 
-./bash_profile
 ```bash
 echo "rm -f ~/Downloads/*" >> .bash_profile
 ```
@@ -67,8 +66,8 @@ printf "mkdir -p '$HOME/Downloads/auto_created/logs'\ntouch '$HOME/Downloads/aut
 
 ```bash
 # bash
-sudo bash -c echo "공식 메시지" >> /etc/login_notice.txt
-sudo bash -c echo "cat /etc/login_notice.txt" >> /etc/profile
+sudo bash -c "echo '공식 메시지' >> /etc/login_notice.txt"
+sudo bash -c "echo 'cat /etc/login_notice.txt' >> /etc/profile"
 
 # tee
 echo "공식 메시지" | sudo tee /etc/login_notice.txt
