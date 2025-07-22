@@ -27,9 +27,8 @@ echo "echo 'Welcome, $USER'" >> .bash_profile
 - 로그인 시 자동 실행  
 
 ./bash_profile
-> `find` 사용해서 파일만 찾고 `-exec` 사용해서 rm 명령 사용 찾은 파일을 = `{}` 
 ```bash
-rm -f ~/Downloads/*
+echo "rm -f ~/Downloads/*" >> .bash_profile
 ```
 
 ---
