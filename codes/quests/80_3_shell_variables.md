@@ -70,11 +70,13 @@ EOF
 - wc 명령어 사용
 
 🔧 예시 실행:
+```bash
 bash wordcount.sh
 Enter filename: sample.txt
 Word count in sample.txt: 123
+```
 
-create file
+create sample.txt
 ```bash
 cat > sample.txt <<EOF
 The bright sun shines over the calm green fields where children play happily every morning.
@@ -119,8 +121,10 @@ Word count in sample.txt : 123 sample.txt
 - grep, wc, 변수 사용
 
 🔧 예시 실행:
+```bash
 bash count_keyword.sh error logfile.txt
 The word 'error' appeared 5 times.
+```
 
 count_keyword.sh
 ```bash
@@ -151,10 +155,13 @@ The word 'error' appeared 3 times
 - 변수 활용 및 리다이렉션 사용
 
 🔧 예시 실행:
+```bash
 bash unique_words.sh
 Enter input file: article.txt
 Unique words saved to: article_unique.txt
+```
 
+> [!TIP]
 > `${VAR%.*}` : 확장자 제거 (`article.txt` -> `article`) 
 > `${VAR##*/}` : 경로 제거하고 파일명만 추출 (`~/path/article.txt `-> `article.txt`)
 > `${VAR%/*}` : 경로만 추출 (`~/path/article.txt `-> `~/path`)
@@ -208,9 +215,13 @@ use
 - 임시 변수에 각 줄 저장
 
 🔧 예시 실행:
+
+```bash
 bash compare_lastline.sh file1.txt file2.txt
 Result: Different
+```
 
+> [!TIP]
 > - diff는 string 비교가 불가능하므로 임시 파일로 각 string을 저장하고 비교
 > - diff의 출력 결과는 필요 없기 때문에 /dev/null로 보내서 화면에 출력되지 않게 함
 > - 하지만 결과는 메모리에 저장됨 `$?` 으로 확인 가능 (종료코드: 같으면 0, 다르면 1)
@@ -242,6 +253,8 @@ rm -f /tmp/line1.tmp /tmp/line2.tmp
 - 결과를 정렬된 상태로 출력
 
 🔧 예시 실행:
+
+```bash
 bash email_domains.sh
 Enter file name: people.txt
 
@@ -249,7 +262,9 @@ Output:
 5 gmail.com
 3 naver.com
 2 daum.net
+```
 
+> [!TIP]
 > `grep -E` 를 사용해서 `\+` 대신 그냥 `+` 사용
 
 ```bash
@@ -278,13 +293,10 @@ Output:
 30 and  
 20 python  
 
-> `tr`: upper to lower, 알파벳만
+create document.txt
 
 ```bash
-read -p "Enter file to process: " V_FILENAME
-
-if [ ! -e "$V_FILENAME" ]; then
-    cat > "$V_FILENAME" <<EOF
+cat > "$V_FILENAME" <<EOF
 The world of programming is vast, and Python is one of the most popular languages today. 
 Python is used in many fields, from web development to machine learning and artificial intelligence. 
 The versatility of Python makes it an excellent choice for beginners and experts alike. 
@@ -295,6 +307,16 @@ The ease of learning Python is one reason why so many people choose it over othe
 And as new technologies emerge, Python continues to adapt and thrive. 
 In conclusion, the future of Python looks bright, and it will remain a cornerstone of modern development for years to come.
 EOF
+```
+
+> [!TIP]
+> `tr`: upper to lower, 알파벳만
+
+```bash
+read -p "Enter file to process: " V_FILENAME
+
+if [ ! -e "$V_FILENAME" ]; then
+    
 fi
 
 tr '[:upper:]' '[:lower:]' < "$V_FILENAME" | tr -cs "A-Za-z" "\n" | sort | uniq -c | sort -nr | head -3
