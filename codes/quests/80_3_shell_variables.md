@@ -162,9 +162,9 @@ Unique words saved to: article_unique.txt
 ```
 
 > [!TIP]
-> `${VAR%.*}` : 확장자 제거 (`article.txt` -> `article`) 
-> `${VAR##*/}` : 경로 제거하고 파일명만 추출 (`~/path/article.txt `-> `article.txt`)
-> `${VAR%/*}` : 경로만 추출 (`~/path/article.txt `-> `~/path`)
+> - `${VAR%.*}` : 확장자 제거 (`article.txt` -> `article`) 
+> - `${VAR##*/}` : 경로 제거하고 파일명만 추출 (`~/path/article.txt `-> `article.txt`)
+> - `${VAR%/*}` : 경로만 추출 (`~/path/article.txt `-> `~/path`)
 
 ```bash
 read -p "Enter input file: " V_ARTICLE
@@ -314,10 +314,6 @@ EOF
 
 ```bash
 read -p "Enter file to process: " V_FILENAME
-
-if [ ! -e "$V_FILENAME" ]; then
-    
-fi
 
 tr '[:upper:]' '[:lower:]' < "$V_FILENAME" | tr -cs "A-Za-z" "\n" | sort | uniq -c | sort -nr | head -3
 ```
