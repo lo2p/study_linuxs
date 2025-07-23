@@ -54,14 +54,15 @@ Hello Linux Learners!
 
 80_1_shell_variables_aguments.sh
 ```bash
-V_filename="$1"
-V_text="$2"
 V_varcount="$#"
 
-if [ "$#" -eq 2 ]; then
-    echo "$V_text" > "$V_filename"
-    echo "$V_filename 파일이 성공적으로 생성되었습니다."
-else
-    echo "Argument가 $V_varcount 개 입니다"
+if [ "$#" -nq 2 ]; then
+    echo "Argument가 $V_varcount 개 입니다. 2개를 입력해야 합니다."
 fi
+
+V_filename="$1"
+V_text="$2"
+
+echo "$V_text" > "$V_filename"
+echo "$V_filename 파일이 성공적으로 생성되었습니다."
 ```
