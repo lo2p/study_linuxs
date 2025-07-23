@@ -16,4 +16,5 @@
 - Nano Practice: [퀘스트](/codes/quests/50_linux_practice_problems.md)
 - Nano Shell Command-chaining: [퀘스트](/codes/quests/51_linux_practice_problems.md)
 - Linux Permissions: [퀘스트](/codes/quests/52_linux_Manage-permissions.md)
-- Useful text controls: [퀘스트](/codes/quests/71_useful_text_controls.md) 
+- Useful text controls: [퀘스트](/codes/quests/71_useful_text_controls.md)
+- Shell Variables Arguments: [퀘스트](/codes/quests/80_1_shell_variables_aguments.md)
