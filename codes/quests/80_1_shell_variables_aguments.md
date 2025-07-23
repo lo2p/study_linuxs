@@ -81,7 +81,7 @@ main() {
     V_varcount="$#"
     V_filename="$1"
     V_text="$2"
-    if [ "$#" -ne 2 ]; then
+    if [ $V_varcount -ne 2 ]; then
         echo "Argument가 $V_varcount 개 입니다. 2개를 입력해야 합니다."
         return 1
     fi
