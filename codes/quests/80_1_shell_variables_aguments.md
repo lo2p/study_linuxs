@@ -26,31 +26,24 @@
 3. 파일 생성 및 내용 기록  
 4. 완료 메시지 출력  
 
----
-
 ## ✅ 실행 예제
 
 $ ./create_file.sh welcome.txt "Hello Linux Learners!"
-
 
 ## 📂 결과
 
 - 현재 디렉토리에 welcome.txt 파일이 생성됨  
 - welcome.txt 파일 내용:  
-
-Hello Linux Learners!
+    Hello Linux Learners!
 
 - 터미널 출력:  
-
-[✔] welcome.txt 파일이 성공적으로 생성되었습니다.
-
----
+    [✔] welcome.txt 파일이 성공적으로 생성되었습니다.
 
 ## 💡 힌트
 
 - $1, $2를 사용하여 외부 인자를 받을 수 있습니다.
 
-## terminal
+## Terminal
 
 ```bash
 source 80_1_shell_variables_aguments.sh welcome.txt "Hello Linux Learners!"
@@ -65,7 +58,8 @@ welcome.txt 파일이 성공적으로 생성되었습니다.
 
 ## code block
 
-80_1_shell_variables_aguments.sh
+[코드](/codes/quests/file/80_1_shell_variables_aguments.sh)
+
 ```bash
 V_varcount="$#"
 
