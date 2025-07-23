@@ -9,6 +9,6 @@ source 80_2_shell_variables_read.sh
 read input: read_first
 
 # output
-input values : read_first
+input values : agument_first read_first
 ```
 
