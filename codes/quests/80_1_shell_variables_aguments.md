@@ -58,7 +58,7 @@ welcome.txt 파일이 성공적으로 생성되었습니다.
 
 ## code block
 
-[코드](/codes/quests/file/80_1_shell_variables_aguments.sh)
+[코드](/codes/quests/files/80_1_shell_variables_aguments.sh)
 
 ```bash
 V_varcount="$#"
