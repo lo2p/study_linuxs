@@ -78,6 +78,7 @@ echo "$V_filename 파일이 성공적으로 생성되었습니다."
 function 으로
 ```bash
 main() {
+    V_varcount="$#"
     V_filename="$1"
     V_text="$2"
     if [ "$#" -ne 2 ]; then
@@ -88,8 +89,6 @@ main() {
     echo "$V_text" > "$V_filename"
     echo "$V_filename 파일이 성공적으로 생성되었습니다."
 }
-
-V_varcount="$#"
 
 main "$@"
 ```
