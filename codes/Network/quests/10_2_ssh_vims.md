@@ -28,9 +28,9 @@ chmod +x setup_env.sh && ./setup_env.sh
 
 각 실습은 서로 다른 SSH 대상에서 수행
 
-ssh user@192.168.0.101  # 컴퓨터1 (comp1 디렉토리 실습)
-ssh user@192.168.0.102  # 컴퓨터2 (comp2 디렉토리 실습)
-ssh user@192.168.0.103  # 컴퓨터3 (comp3 디렉토리 실습)
+- ssh user@192.168.0.101  # 컴퓨터1 (comp1 디렉토리 실습)
+- ssh user@192.168.0.102  # 컴퓨터2 (comp2 디렉토리 실습)
+- ssh user@192.168.0.103  # 컴퓨터3 (comp3 디렉토리 실습)
 
 ```bash
 ssh user01@192.168.0.10
