@@ -315,5 +315,5 @@ EOF
 ```bash
 read -p "Enter file to process: " V_FILENAME
 
-tr '[:upper:]' '[:lower:]' < "$V_FILENAME" | tr -cs "A-Za-z" "\n" | sort | uniq -c | sort -nr | head -3
+tr "A-Z" "a-z" < "$V_FILENAME" | tr -cs "A-Za-z" "\n" | sort | uniq -c | sort -nr | head -3
 ```
