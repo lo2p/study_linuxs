@@ -2,7 +2,10 @@
 
 80_2_shell_variables_read.sh 
 
-[코드](/codes/quests/files/80_2_shell_variables_read.sh)
+```bash
+read -p "read input: " V_ARG
+echo "input values : $1 $V_ARG"
+```
 
 ```bash
 source 80_2_shell_variables_read.sh 
