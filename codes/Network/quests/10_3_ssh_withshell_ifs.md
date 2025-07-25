@@ -117,7 +117,25 @@ EOF
 ```bash
 #!/bin/bash
 
+# variables
 V_FILE="students.txt" 
+V_AGRADE=0
+V_BGRADE=0
+V_CGRADE=0
+v_DGRADE=0
+
+# function
+countgrade() {
+    if [ $1 -ge 90 ]; then
+        ((++V_AGRADE))
+    elif [ $1 -ge 80 ]; then
+        ((++V_BGRADE))
+    elif [ $1 -ge 70 ]; then
+        ((++V_CGRADE))
+    else
+        ((++v_DGRADE))
+    fi
+}
 
 read -p "Subject (math, english, science): " V_SUBJECT
 
@@ -126,7 +144,7 @@ V_SUBJECT=$(echo "$V_SUBJECT" | tr 'A-Z' 'a-z')
 # user input 확인
 if [ "$V_SUBJECT" != "math" ] && [ "$V_SUBJECT" != "english" ] && [ "$V_SUBJECT" != "science" ]; then
     echo "$V_SUBJECT 는 없는 과목입니다."
-    exit 1
+    return 1
 fi
 
 # column 선택
@@ -149,10 +167,31 @@ V_SUM=$((V_SUM_STR))
 V_COUNT=$(echo "$V_SCORES" | wc -l)
 V_AVERAGE=$(("$V_SUM" / "$V_COUNT"))
 
-echo "$V_SCORES"
-echo "최고점: $V_HIGHEST"
-echo "최저점: $V_LOWEST"
-echo "평균점수: $V_AVERAGE"
+echo "$V_SCORES"; echo;
+echo "Max: $V_HIGHEST"; echo "Min: $V_LOWEST"; echo "Average: $V_AVERAGE"; echo;
+
+# 90점 이상(A), 80점 이상(B), 70점 이상(C), 그 외(D) 등급별 학생 수 출력
+countgrade $(echo $V_SCORES | cut -d" " -f"1")
+countgrade $(echo $V_SCORES | cut -d" " -f"2")
+countgrade $(echo $V_SCORES | cut -d" " -f"3")
+countgrade $(echo $V_SCORES | cut -d" " -f"4")
+countgrade $(echo $V_SCORES | cut -d" " -f"5")
+countgrade $(echo $V_SCORES | cut -d" " -f"6")
+countgrade $(echo $V_SCORES | cut -d" " -f"7")
+countgrade $(echo $V_SCORES | cut -d" " -f"8")
+countgrade $(echo $V_SCORES | cut -d" " -f"9")
+countgrade $(echo $V_SCORES | cut -d" " -f"10")
+
+echo "A: $V_AGRADE"; echo "B: $V_BGRADE"; echo "C: $V_CGRADE"; echo "D: $v_DGRADE"; echo;
+
+# 평균이 85점 이상이면 "우수", 75점 이상이면 "양호", 그 외는 "보통" 출력
+if [ "$V_AVERAGE" -ge 85 ]; then
+    echo "Average: $V_AVERAGE"; echo "우수"
+elif [ "$V_AVERAGE" -ge 75 ]; then
+    echo "Average: $V_AVERAGE"; echo "양호"
+else
+    echo "Average: $V_AVERAGE"; echo "보통"
+fi
 ```
 
 ---
