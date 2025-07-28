@@ -36,33 +36,33 @@ $ ./webserver.sh tail_log
 V_PID=$(ps aux | grep "python" | grep "http.server" | tr -s " " | cut -d" " -f2)
 
 if [ "$1" = "start" ]; then
-        nohup python3 -m http.server 8000 --bind 0.0.0.0 > server.log &
-        echo "서버가 백그라운드에서 시작되었습니다."
+	nohup python3 -m http.server 8000 --bind 0.0.0.0 > server.log &
+	echo "서버가 백그라운드에서 시작되었습니다."
 elif [ "$1" = "status" ]; then
-        if  [ -n "$V_PID" ]; then
-		        echo "서버 실행 중입니다. PID: $V_PID"
-        else
-                echo "실행 중인 서버가 없습니다."
+	if  [ -n "$V_PID" ]; then
+		echo "서버 실행 중입니다. PID: $V_PID"
+	else
+		echo "실행 중인 서버가 없습니다."
         fi
 elif [ "$1" = "stop" ]; then
-		if [ -n "$V_PID" ]; then
-	        kill "$V_PID"
-	        echo "서버가 종료되었습니다."
-        else
-	        echo "실행 중인 서버가 없습니다."
-	    fi
+	if [ -n "$V_PID" ]; then
+		kill "$V_PID"
+		echo "서버가 종료되었습니다."
+	else
+		echo "실행 중인 서버가 없습니다."
+	fi
 elif [ "$1" = "restart" ]; then
-		if [ -n "$V_PID" ]; then
-	        kill "$V_PID"
-	        nohup python3 -m http.server 8000 --bind 0.0.0.0 > server.log &
-	        echo "서버가 재시작 되었습니다."
-	    else
-		    nohup python3 -m http.server 8000 --bind 0.0.0.0 > server.log &
-		    echo "서버가 재시작 되었습니다."
-		fi
+	if [ -n "$V_PID" ]; then
+		kill "$V_PID"
+		nohup python3 -m http.server 8000 --bind 0.0.0.0 > server.log &
+		echo "서버가 재시작 되었습니다."
+	else
+		nohup python3 -m http.server 8000 --bind 0.0.0.0 > server.log &
+		echo "서버가 재시작 되었습니다."
+	fi
 elif [ "$1" = "tail_log" ]; then
-        tail server.log
+	tail server.log
 else
-        echo "error! entered: $1"
+	echo "error! entered: $1"
 fi
 ```
