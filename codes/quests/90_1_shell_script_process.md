@@ -53,7 +53,7 @@ elif [ "$1" = "stop" ]; then
 	fi
 elif [ "$1" = "restart" ]; then
 	if [ -n "$V_PID" ]; then
-		kill "$V_PID"
+		kill -9 "$V_PID"
 		nohup python3 -m http.server 8000 --bind 0.0.0.0 >> server.log &
 		echo "서버가 재시작 되었습니다."
 	else
