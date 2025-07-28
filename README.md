@@ -19,3 +19,4 @@
 - Useful text controls: [퀘스트](/codes/quests/71_useful_text_controls.md)
 - Shell Variables 1: [퀘스트](/codes/quests/80_1_shell_variables_aguments.md)
 - Shell Variables 2: [퀘스트](/codes/quests/80_3_shell_variables.md)
+- Shell Script Process: [퀘스트](/codes/quests/90_1_shell_script_process.md)
